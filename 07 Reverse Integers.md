@@ -52,22 +52,3 @@ var reverse = function(x) {
   return (x < 0? -1: 1) * n
 };
 ```
-
-#### TWO
-
-Pure mathamatical solution.
-
-```javascript
-/**
- * @param {number} x
- * @return {number}
- */
-var reverse = function(x) {
-  let result = 0
-  while (x) {
-    result = result * 10 + x % 10
-    x = x / 10 | 0
-  }
-  return Math.abs(result) > 2147483647 ? 0 : result
-};
-```

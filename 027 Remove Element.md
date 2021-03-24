@@ -70,17 +70,21 @@ The order does not matter. So just take the last number to fill the vacancy.
  * @param {number} val
  * @return {number}
  */
+
+// created a function that passes in numbers and values
 var removeElement = function(nums, val) {
-  let len = nums.length
-  for (let i = 0; i < len; i++) {
-    if (nums[i] === val) {
-      nums[i--] = nums[--len]
+    // created a variable equal to length of the numbers
+    let len = nums.length
+    // loop through while i is less than len
+    for (let i = 0; i < len; i++){
+        // conditional of if the index of numbers is equal to value
+        if(nums[i] === val){
+            // deincrement the numbers index and set that to numbers len 
+            nums[i--] = nums[--len]
+        }
     }
-  }
-  return len
+    return len
 };
 ```
 
-
-*Template generated via [Leetmark](https://github.com/crimx/crx-leetmark).*
 

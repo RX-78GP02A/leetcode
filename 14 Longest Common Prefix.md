@@ -33,28 +33,33 @@ All given inputs are in lowercase letters `a-z`.
 
 ### Solution:
 
-#### ONE
-
-JavaScript specific solution. Get the min len then narrow down the prefix.
-
 ```javascript
+
 /**
  * @param {string[]} strs
  * @return {string}
  */
+// created a function called longestCommonPrefix
 var longestCommonPrefix = function (strs) {
+  // created a initialized var called prefix
+  let prefix = ''
+  // if words is greater than 0
   if (strs.length > 0) {
-    let minLen = Math.min(...strs.map(s => s.length))
-    const anyStr = strs[0]
-    while (minLen) {
-      const prefix = anyStr.slice(0, minLen--)
-      if (strs.every(s => s.startsWith(prefix))) {
-        return prefix
+    // iterate 
+    for (let i = 0; ; i++) {
+      const common = strs[0][i]
+      if (!common) { return prefix }
+      for (let j = 0; j < strs.length; j++) {
+        if (strs[j][i] !== common) {
+          return prefix
+        }
       }
+      prefix += common
     }
   }
-  return ''
+  return prefix
 };
+
 ```
 
 

@@ -64,17 +64,22 @@ The result array can only be shorter. That is why we can build the array in-plac
  * @param {number[]} nums
  * @return {number}
  */
+
+// create fucntion that passes in nums 
 var removeDuplicates = function(nums) {
-  let len = 0
-  for (let i = 0; i < nums.length; i++) {
-    if (nums[i] !== nums[i-1]) {
-      nums[len++] = nums[i]
+    // intialized a variable called len
+    let len = 0;
+    // creates a loop to iterate through the length of numbers
+    for (let i = 0; i < nums.length; i++) {
+        // if the index of numbers is not  (index -1) add one to len 
+        if(nums[i] !== nums[i-1]){
+            // increment the numbers len and set it to the numbers new index
+            nums[len++] = nums[i]
+}
     }
-  }
-  return len
+ // return len  
+ return len
 };
 ```
 
-
-*Template generated via [Leetmark](https://github.com/crimx/crx-leetmark).*
 

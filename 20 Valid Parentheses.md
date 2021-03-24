@@ -61,11 +61,9 @@ Output: true
 
 Stack 101.
 
-Whenever we meet a close bracket, we want to compare it to the last open bracket.
+We want to compare a close bracket to the last open bracket.
 
-That is why we use stack to store open brackets: first in, last out.
-
-And since there is only bracket characters, the last open bracket happens to be the last character.
+We use a stack to store open brackets: first in, last out.
 
 ```javascript
 /**
